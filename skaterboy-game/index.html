@@ -27,8 +27,10 @@
         LS / RS circles: front / rear foot; drag from the center.<br />
         LT / RT thumb zones: slide up for more pressure, release to let go. Use
         both thumbs together to pump, or hold PUMP with one thumb.<br />
-        A: push. B: brake. LB / RB: catch. Down / Up: set / return to marker.<br />
-        Ollie: hold RS down, then flick LS up. Reverse for a nollie.<br />
+        B above LT: brake. A above RT: push. LB / RB: catch. Down / Up: set /
+        return to marker.<br />
+        Ollie: keep RS held down and flick LS up. Add a sideways LS flick for
+        kickflips / heelflips. Reverse feet for a nollie.<br />
         Drag the uncovered park to orbit; pinch to zoom. Landscape gives more
         room.
       </p>
@@ -37,7 +39,7 @@
         A / Cross or X / Square: push. B / Circle: brake.<br />
         LT / L2 and RT / R2: steer; in air: body spin.<br />
         Both triggers: pump on transitions.<br />
-        Hold right stick DOWN, flick left stick UP: ollie.<br />
+        Keep right stick DOWN, flick left stick UP: ollie.<br />
         Flick front foot sideways at pop: kickflip / heelflip.<br />
         Scoop rear foot sideways: shuvit; combine both sticks.<br />
         Reverse feet for nollies. Bumpers: catch (auto-catch also enabled).<br />
@@ -65,6 +67,9 @@
       aria-label="Xbox-style touch controller"
     >
       <div class="touch-side">
+        <button class="touch-b" data-touch="brake" aria-label="B: brake">
+          B<span>BRAKE</span>
+        </button>
         <button
           class="touch-trigger"
           data-touch="leftTrigger"
@@ -98,12 +103,6 @@
           <button data-touch="catch" aria-label="LB / RB: catch board">
             LB/RB<span>CATCH</span>
           </button>
-          <button class="touch-b" data-touch="brake" aria-label="B: brake">
-            B<span>BRAKE</span>
-          </button>
-          <button class="touch-a" data-touch="push" aria-label="A: push">
-            A<span>PUSH</span>
-          </button>
         </div>
         <button
           class="touch-pump"
@@ -114,6 +113,9 @@
         </button>
       </div>
       <div class="touch-side touch-side-right">
+        <button class="touch-a" data-touch="push" aria-label="A: push">
+          A<span>PUSH</span>
+        </button>
         <button
           class="touch-trigger"
           data-touch="rightTrigger"
