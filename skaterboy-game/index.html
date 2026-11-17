@@ -12,10 +12,10 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="apple-touch-icon" href="./icons/icon-192.png" />
     <style>html,body{height:100dvh;margin:0;overflow:hidden}#renderCanvas{outline:none;width:100%;height:100%;display:block}#status{color:#fff;pointer-events:none;background:#0000008c;border-radius:4px;padding:4px 8px;font:13px/1.4 system-ui,sans-serif;position:fixed;top:8px;left:8px}#skateHud,#trickHud,#controls,#parkGuide,#playersHud{color:#fff5dd;background:#191e22d4;border-radius:6px;padding:10px 14px;font:14px/1.5 system-ui,sans-serif;position:fixed}#parkGuide{background:#191e22f0;width:min(320px,42vw);max-height:65vh;font-size:12px;bottom:76px;left:12px;overflow:auto}#parkGuide svg{border:1px solid #536064;border-radius:4px;width:100%;margin-top:10px;display:block}#parkGuide summary{cursor:pointer;font-weight:700}#parkGuide details{border-top:1px solid #424b4d;padding:5px 0}#parkGuide p{margin:5px 0 8px}.park-orientation{color:#bac6c7;font-size:10px}#skateHud{bottom:12px;left:12px}#trickHud{pointer-events:none;font-size:20px;top:50px;left:12px}#controls{max-width:325px;max-height:65vh;top:12px;right:12px;overflow:auto}#controls summary{cursor:pointer;font-weight:700}#controls p{margin:8px 0 0}#playersHud{white-space:pre-line;max-width:260px;font-size:12px;bottom:12px;right:12px}#installApp{z-index:5;left:50%;bottom:max(12px, env(safe-area-inset-bottom));color:#fff5dd;cursor:pointer;background:#191e22ed;border:1px solid #fff5dd80;border-radius:8px;padding:10px 14px;font:700 14px system-ui,sans-serif;position:fixed;transform:translate(-50%)}.touch-enabled #installApp{bottom:calc(max(10px, env(safe-area-inset-bottom)) + 245px)}@media (orientation:landscape) and (height<=500px){.touch-enabled #installApp{bottom:calc(max(10px, env(safe-area-inset-bottom)) + 205px)}}@media (width<=700px){#controls{max-width:220px;font-size:12px;top:auto;bottom:65px}#trickHud{max-width:80vw;font-size:16px}#skateHud{font-size:12px}#playersHud{max-width:160px;bottom:58px}}</style>
-    <script type="module" crossorigin src="/skaterboy-game/assets/index-Cwm7tip0.js"></script>
+    <script type="module" crossorigin src="/skaterboy-game/assets/index-RYB5ejf2.js"></script>
     <link rel="modulepreload" crossorigin href="/skaterboy-game/assets/halfFloat-CXxwV7oo.js">
     <link rel="modulepreload" crossorigin href="/skaterboy-game/assets/logger-CuBYPcDK.js">
-    <link rel="stylesheet" crossorigin href="/skaterboy-game/assets/index-6st5XEhP.css">
+    <link rel="stylesheet" crossorigin href="/skaterboy-game/assets/index-C5Uo3zM2.css">
   </head>
   <body>
     <canvas id="renderCanvas" aria-label="Skatepark" tabindex="0"></canvas>
@@ -24,15 +24,61 @@
     <div id="trickHud" role="status" aria-live="polite"></div>
     <div id="playersHud" aria-label="Session scores"></div>
     <button id="installApp" type="button" hidden>Install Skaterboy</button>
+    <button id="openSettings" type="button" aria-haspopup="dialog">
+      Settings
+    </button>
+    <dialog id="settingsDialog" aria-labelledby="settingsTitle">
+      <header class="settings-header">
+        <div>
+          <p class="settings-eyebrow">SKATERBOY / MAKE IT YOURS</p>
+          <h1 id="settingsTitle">Settings</h1>
+        </div>
+        <button id="closeSettings" type="button" aria-label="Close settings">
+          Done
+        </button>
+      </header>
+      <p class="settings-intro">Your ride. Your way to control it.</p>
+      <section class="settings-card" aria-labelledby="tiltTitle">
+        <div class="setting-row">
+          <h2 id="tiltTitle">Tilt steering</h2>
+          <button
+            id="tiltSteering"
+            type="button"
+            role="switch"
+            aria-checked="false"
+            aria-labelledby="tiltTitle"
+            aria-describedby="tiltDescription tiltStatus"
+          >
+            Off
+          </button>
+        </div>
+        <p id="tiltDescription">
+          Turn using your phone's gyroscope. Tilt left or right from your
+          comfortable holding angle. Touch triggers still work for steering,
+          spins and pumping.
+        </p>
+        <p id="tiltStatus" role="status">
+          Use the outward LT / RT sliders to steer.
+        </p>
+        <button id="calibrateTilt" type="button" disabled>
+          Recenter phone
+        </button>
+      </section>
+      <p class="settings-footer">
+        Controls saved on this device. More ways to make it yours soon.
+      </p>
+      <p id="settingsStorageStatus" role="status"></p>
+    </dialog>
     <details id="parkGuide" open></details>
     <details id="controls">
       <summary>SKATERBOY / Controls</summary>
       <p>
         <b>Touch / smartphone</b><br />
         LS / RS circles: front / rear foot; drag from the center.<br />
-        LT / RT thumb zones: slide up for more pressure, release to let go. Use
-        both thumbs together to pump, or hold either PUMP above the triggers
-        with one thumb.<br />
+        LT / RT thumb zones: slide left on LT, right on RT for more pressure,
+        release to let go. Enable optional tilt steering in Settings. Use both
+        thumbs together to pump, or hold either PUMP above the triggers with one
+        thumb.<br />
         B above LT: brake. A above RT: push. LB / RB: catch. Down / Up: set /
         return to marker.<br />
         Ollie: keep RS held down and flick LS up. Add a sideways LS flick for
@@ -87,9 +133,9 @@
         <button
           class="touch-trigger"
           data-touch="leftTrigger"
-          aria-label="LT: steer left or spin; slide up for pressure"
+          aria-label="LT: steer left or spin; slide left for pressure"
         >
-          <b>LT</b><span>SLIDE UP</span>
+          <b>LT</b><span>SLIDE LEFT</span>
         </button>
         <div
           class="touch-stick"
@@ -134,9 +180,9 @@
         <button
           class="touch-trigger"
           data-touch="rightTrigger"
-          aria-label="RT: steer right or spin; slide up for pressure"
+          aria-label="RT: steer right or spin; slide right for pressure"
         >
-          <b>RT</b><span>SLIDE UP</span>
+          <b>RT</b><span>SLIDE RIGHT</span>
         </button>
         <div
           class="touch-stick"
