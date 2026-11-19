@@ -1,4 +1,4 @@
-import{E as e}from"./index-BkXAZoVj.js";var t=`clipPlaneFragmentDeclaration`,n=`#ifdef CLIPPLANE
+import{E as e}from"./index-B7kod8JV.js";var t=`clipPlaneFragmentDeclaration`,n=`#ifdef CLIPPLANE
 varying float fClipDistance;
 #endif
 #ifdef CLIPPLANE2
