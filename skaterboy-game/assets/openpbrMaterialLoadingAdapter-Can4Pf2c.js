@@ -1,1 +1,0 @@
-export{r as OpenPBRMaterialLoadingAdapter}from"./modelTemplate-BUD2Ke5J.js";
