@@ -1,1 +1,0 @@
-export{i as _RegisterKHRAnimationPointerData}from"./modelTemplate-BiPdTQGM.js";
