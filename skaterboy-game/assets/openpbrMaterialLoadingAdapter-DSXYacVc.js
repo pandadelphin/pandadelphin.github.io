@@ -1,0 +1,1 @@
+export{r as OpenPBRMaterialLoadingAdapter}from"./modelTemplate-BT9Xzh8x.js";

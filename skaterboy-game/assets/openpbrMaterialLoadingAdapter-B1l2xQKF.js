@@ -1,1 +1,0 @@
-export{r as OpenPBRMaterialLoadingAdapter}from"./modelTemplate-Bp2cXt2W.js";

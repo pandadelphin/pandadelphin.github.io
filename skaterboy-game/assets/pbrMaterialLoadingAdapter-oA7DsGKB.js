@@ -1,1 +1,0 @@
-export{n as PBRMaterialLoadingAdapter}from"./modelTemplate-Bp2cXt2W.js";
