@@ -1,1 +1,0 @@
-export{i as _RegisterKHRAnimationPointerData}from"./modelTemplate-a1iL1Il6.js";

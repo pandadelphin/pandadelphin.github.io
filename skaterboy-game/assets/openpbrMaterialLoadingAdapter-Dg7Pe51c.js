@@ -1,1 +1,0 @@
-export{n as OpenPBRMaterialLoadingAdapter}from"./modelTemplate-a1iL1Il6.js";
