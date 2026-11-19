@@ -1,0 +1,1 @@
+export{r as OpenPBRMaterialLoadingAdapter}from"./modelTemplate-BUrtWH7A.js";
