@@ -1,0 +1,1 @@
+export{n as OpenPBRMaterialLoadingAdapter}from"./modelTemplate-BiPdTQGM.js";
