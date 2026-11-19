@@ -1,1 +1,0 @@
-export{a as _RegisterKHRAnimationPointerData}from"./modelTemplate-BUrtWH7A.js";

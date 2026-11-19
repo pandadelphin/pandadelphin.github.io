@@ -1,1 +1,0 @@
-export{n as PBRMaterialLoadingAdapter}from"./modelTemplate-BUrtWH7A.js";
