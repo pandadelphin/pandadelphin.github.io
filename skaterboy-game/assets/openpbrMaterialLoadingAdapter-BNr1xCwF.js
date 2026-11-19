@@ -1,0 +1,1 @@
+export{r as OpenPBRMaterialLoadingAdapter}from"./modelTemplate-5h3AljHN.js";

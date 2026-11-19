@@ -1,1 +1,0 @@
-export{r as OpenPBRMaterialLoadingAdapter}from"./modelTemplate-CHCd4dfn.js";
