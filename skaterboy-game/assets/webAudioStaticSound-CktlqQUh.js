@@ -1,1 +1,0 @@
-export{m as _WebAudioStaticSound,h as _WebAudioStaticSoundBuffer}from"./modelTemplate-BvB6jd6g.js";
