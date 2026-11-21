@@ -1,1 +1,0 @@
-export{n as PBRMaterialLoadingAdapter}from"./modelTemplate-Cj1uVRU1.js";
