@@ -1,0 +1,1 @@
+export{m as _WebAudioStaticSound,h as _WebAudioStaticSoundBuffer}from"./modelTemplate-kNKl3B6v.js";
